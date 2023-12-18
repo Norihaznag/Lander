@@ -12,14 +12,14 @@ const Theme = ({click}:any) => {
 
   return (
     <ThemeContext.Provider value={state}>
-      <div className={`${code ? 'bg-[#2c2c2c] text-white' : 'bg-[#fff3e0] text-[#e4b636]'} p-2 rounded-[100%] flex `} onClick={()=>{
+      <div className={`${code ? 'bg-[rgb(41,41,41)] text-white' : 'bg-[#fff3e0] text-[#e4b636]'}  rounded-[100%] flex   `} onClick={()=>{
       setcode(!code) ;
       console.log(code) ;
     }}>
     {code ? (
-      <NightIcon onClick={click} />
+      <NightIcon className='object-fit' onClick={click} />
     ) : (
-      <LightIcon onClick={click}  />
+      <LightIcon className=' ' onClick={click}  />
     )}
   </div>
     </ThemeContext.Provider>

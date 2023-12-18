@@ -2,15 +2,19 @@ import Link from 'next/link';
 import React, { Children, createContext, useContext, useState } from 'react';
 import LightIcon from '@mui/icons-material/LightMode';
 import NightIcon from '@mui/icons-material/NightlightRound';
+import type { AppProps } from 'next/app';
 
 // Define the type for the context value
 type ThemeContextType = boolean;
 // Create the context with an initial value
+interface MyAppProps extends AppProps {
+  children: React.ReactNode;
+}
 
 export const ThemeContext = createContext<ThemeContextType>(true);
 
-export default function App({children}) {
-  const [theme, setTheme] = useState<ThemeContextType>(false);
+export default function App({children}: MyAppProps) {
+  const [theme, setTheme] = useState<ThemeContextType>(true);
 
   return (
     <ThemeContext.Provider value={theme}>
@@ -25,7 +29,6 @@ interface ButtonProps {
 
 function IconMode({ setTheme }: ButtonProps) {
   const theme = useContext(ThemeContext);
-  const textColor = theme ? 'text-black' : 'text-white';
   let mode = theme ? <LightIcon/> : <NightIcon/>
   
   return (

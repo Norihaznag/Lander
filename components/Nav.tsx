@@ -12,7 +12,7 @@ import {ThemeContext} from '@/components/Provider'
 import { useContext } from 'react'
 
 interface MyComponentProps {
-  onClick : Event
+  Clicked : any
 }
 
 const Nav: React.FC<MyComponentProps> = ({Clicked}) => {
@@ -28,10 +28,9 @@ const Nav: React.FC<MyComponentProps> = ({Clicked}) => {
 
     <ThemeContext.Provider value={isOpened}>
 
-    <div className="w-screen h-[50px]   flex items-center justify-right md:px-3  sticky top-0 px-  overflow-visible backdrop-blur-sm backdrop-saturate-150 brightness-95" >
+    <div className="w-screen h-[50px]   flex items-center justify-right   sticky top-0 md:px-5  overflow-visible backdrop-blur-sm backdrop-saturate-150 brightness-95" >
       
-      <div className={`Menu absolute bg-[#fff] w-full text-black
-       z-20 h-max top-0 lg:hidden  md:hidden ${isOpened ? 'flex flex-col ' : 'hidden'} `}>
+      <div className={`Menu absolute bg-[#fff] w-[100%] z-20 h-max top-0 lg:hidden  md:hidden ${isOpened ? 'hidden ' : 'flex flex-col'} `}>
 
         <div className="closing w-full h-max overflow-hidden  flex justify-end   ">
 
@@ -43,12 +42,12 @@ const Nav: React.FC<MyComponentProps> = ({Clicked}) => {
         </div>
 
         <div className="links ">
-        <Link className="  w-full p-5 hover:bg-black hover:text-white z-10 flex text-xl font-medium
-          " href={`/`}>
+        <Link className={` w-full p-5  z-10 flex text-xl font-medium  text-white border-b  bg-[#151515]
+          `} href={`/`}>
           Home </Link>
             {links.map((link,index) =>
-          // links 
-<Link className=" text-xl font-medium w-full p-5 hover:bg-black hover:text-white  flex" href={`/${link}`} key={index}>
+           
+<Link className=" text-xl font-medium w-full p-5 bg-[#151515] text-white border-b border-t-red-400 flex" href={`/${link}`} key={index}>
   
   {link}
 
@@ -66,11 +65,11 @@ const Nav: React.FC<MyComponentProps> = ({Clicked}) => {
 
          <div className="lg w-full hidden md:flex  gap-4  items-center h-full self-center pl-4 ">
 
-         <Link className="" href={`/`}>
+         <Link className="focus:text-green-600" href={`/`}>
           Home
             </Link>
             {links.map((link:any,index:any) =>
-<Link href={`/${link}`} key={index}>{link}</Link>   
+<Link href={`/${link}`} className="focus:text-green-600" key={index}>{link}</Link>   
             )}
 
          </div>

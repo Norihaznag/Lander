@@ -1,8 +1,5 @@
-import Nav from "@/components/Nav"
 import '../app/globals.css'
-import Image from "next/image"
 import imger from '@/public/images/imger.jpg'
-import Footer from "@/components/Footer"
 import imger2 from '@/public/images/imger2.jpg'
 import Member from "@/components/Member"
 import pro1 from '@/public/images/pro1.jpg'
@@ -18,24 +15,26 @@ const About = () => {
 
   return (
 
-    <div className="w-full min-h-fit h-full ">
+    <div className="w-full min-h-fit flex flex-col justify-center items-center  ">
       
-      <h1 className="About text-center p-2   ">About Us</h1>
-      <div className={`body flex flex-col w-full h-full select-none`}>
+      <div className={`body flex flex-col items-center justify-center w-[90%] h-full   select-none`}>
+
+      <h1 className="About text-center ">About Us</h1>
+
         <Section title="The Foundation" cs="text-center  " imgsrc={imger} >
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ab, vero magnam veritatis commodi optio velit nesciunt repellat in recusandae fuga natus. Voluptate ab, sunt nesciunt facere pariatur asperiores qui?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit consequuntur distinctio illum commodi optio nihil eum natus officiis, doloremque architecto temporibus, voluptatem vero repellat voluptatum odit sapiente, dignissimos expedita!
    </p>
         </Section>
 
-        <Section title="Why Are We Doing This" cscild="md:order-last" imgsrc={imger2} cs="">
+        <Section title="Why Are We Doing This" cscild="md:order-last" imgsrc={imger2}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ab, vero magnam veritatis commodi optio velit nesciunt repellat in recusandae fuga natus. Voluptate ab, sunt nesciunt facere pariatur asperiores qui?
      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit consequuntur distinctio illum commodi optio nihil eum natus officiis, doloremque architecto temporibus, voluptatem vero repellat voluptatum odit sapiente, dignissimos expedita!
    </p>
         </Section>
-        <div className="w-full h-full  p-4  md:h-[30em] flex flex-col justify-around items-center  ">
-          <h1 className="About text-center ">Our Members</h1>
-          <div className="members md:grid grid-cols-4 md:h-[50%]  md:grid-rows-1  ">
+        <div className="w-full h-full   flex flex-col   ">
+          <h1 id='horror' className="About text-center ">Our Members</h1>
+          <div className="members w-full h-fit  flex flex-col md:gap-4 md:justify-center items-center md:flex-row p-3 ">
 
            <Member name="John Smith" photo={pro1} role="Autor"/>
 

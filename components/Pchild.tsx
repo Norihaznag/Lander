@@ -1,3 +1,4 @@
+'use client' ;
 import styled from 'styled-components'
 
 const Input = styled.input`
@@ -10,11 +11,12 @@ const Input = styled.input`
 
 `
 const Place = styled.div`
-  min-width: 28em ;
+width: 23em;
   min-height: 3em;
   border-radius: 10px;
   display: flex;
   background-color: #007269;
+
   
 `
 const Area = styled.textarea`
@@ -23,8 +25,6 @@ const Area = styled.textarea`
   padding-top: 10px;
   background-color: #007269;
   padding-left: 3em;
-
-  /* position: relative; */
   border-radius: 10px;
   border: none;
 `

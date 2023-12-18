@@ -16,9 +16,9 @@ const Footer = () => {
   return (
     <div className="Footer w-full max-h-fit  flex flex-col place-items-center capitalize  bg-[#001d12] text-[#e7fff5] mt-2 gap-2">
         <div className="logoplace items-center  w-full flex h-fit justify-center  mb-2 bg-[#35B680]">
-        <h1 className="text-[2em]
+        <h1 className="horror text-[2em]
         p-1  
-        place-self-start text-white   ">Zans</h1><span className="text-sm text-white">by Noureddine Azinag</span>
+        place-self-start text-white   ">Lander</h1><span className="text-sm text-white">by Noureddine Azinag</span>
         </div>
 
      <div className="  w-full max-h-fit h-[90%]  flex flex-col md:flex-row  gap-2 justify-center lg:justify-between items-center md:items-start pl-3 pr-3 pt-3">

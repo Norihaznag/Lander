@@ -1,24 +1,24 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Nav from '@/components/Nav'
-
+import StyledComponentsRegistry from './registry'
+import Head from 'next/head'
 
 export const metadata: Metadata = {
-  title: 'Zans Association',
-  description: 'Zans is A dommy ',
+  title: 'Lander Association',
+  description: 'Lander is A dommy ',
 }
 
+ 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-              <Nav/>
-
-      <body className='gallaralla bg-green-800'>
-        {children}</body>
+    <html>
+      <body>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   )
 }

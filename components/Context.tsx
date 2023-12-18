@@ -1,19 +1,31 @@
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useState, Dispatch, SetStateAction } from 'react';
 
-// Create a Context
-export const Context = createContext();
 
-//create a componont who provider the context
-
-const Contexer = ({children}:any) => {
-
-    const [mode,setmode] = useState(false) ;
-
-  return (
-    <Context.Provider value={{mode,setmode}}>
-        {children}
-    </Context.Provider>
-  )
+interface MyContextProps {
+  mode: boolean;
+  setmode: Dispatch<SetStateAction<boolean>>;
 }
 
-export default Contexer ;
+
+const initialContext: MyContextProps = {
+  mode: false,
+  setmode: () => {},
+};
+
+export const MyContext = createContext(initialContext);
+
+
+interface MyContextProviderProps {
+  children: React.ReactNode; 
+}
+
+
+export const MyContextProvider: React.FC<MyContextProviderProps> = ({ children }) => {
+  const [mode, setmode] = useState<boolean>(false);
+
+  return (
+    <MyContext.Provider value={{ mode, setmode }}>
+      {children}
+    </MyContext.Provider>
+  );
+};

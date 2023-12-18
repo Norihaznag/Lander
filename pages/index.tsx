@@ -18,14 +18,13 @@ const Home = () => {
 
 
       <div className="main w-full  min-h-[fit]  flex flex-col  
-place-items-center pt-6 pb-4  place-content-end md:h-[80vh] ">
+place-items-center pt-6 pb-4  place-content-end md:h-[80vh]">
 
- <div className="w-[80%] h-[100%]    md:w-[60%] flex flex-col items-center text-left p-5">
+ <div className="w-[90%] h-[100%]    md:w-[80%] flex flex-col items-center justify-center text-center  px-4">
    
-<h1 className='font-bold text-[1.8em] md:text-[2.5em]
+<h1 className='font-bold md:text-5xl  text-4xl 
 pb-4'>
- Empowering Orphans, Enriching Lives: Building Hope, One Child at a Time,
- This is Us,Lander
+ Empowering Orphans, Enriching Lives: Building Hope, One Child at a Time
  </h1>
 
    <p className='pb-5 '>
@@ -34,7 +33,7 @@ pb-4'>
 
    <Link href={'/About'} className=' text-xl  bg-[#012920]
    min-w-[10rem]
-   h-[2em] flex  rounded-xl items-center justify-center  text-white'>
+   h-[2em] flex  rounded-xl items-center justify-center  text-white animate-fade-left '>
    Learn More
    </Link>
  </div>

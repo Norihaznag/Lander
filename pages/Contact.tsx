@@ -1,4 +1,5 @@
 import '../app/globals.css'
+import Footer from '@/components/Footer'
 import Image from 'next/image'
 import deal from '@/public/images/deal.svg'
 import Submited from '@/components/Submited'
@@ -14,7 +15,7 @@ const Contact = () => {
         <Image src={deal} alt='s' className='w-[22em]  md:w-[30em] h-fit object-fit'/>
         </div>
        
-       <form action="" className=' min-w-fit w-[fit]  h-[30em]  flex flex-col items-center p-4 gap-2 justify-around '>
+       <form action="" className=' h-[30em]  flex flex-col items-center w-[50%] p-4 gap-2 justify-around '>
 
         <Submited/>
 
