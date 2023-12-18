@@ -19,6 +19,7 @@
     "@mui/lab": "^5.0.0-alpha.155",
     "@mui/material": "^5.14.19",
     "@mui/styled-engine-sc": "^6.0.0-alpha.7",
+    "@vercel/speed-insights": "^1.0.2",
     "@zeit/next-css": "^1.0.1",
     "copy-to-clipboard": "^3.3.3",
     "css-loader": "^6.8.1",
